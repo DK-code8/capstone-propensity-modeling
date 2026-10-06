@@ -12,7 +12,10 @@ neural network. A top-5-categories-per-user alternative is also tested.
 Python · pandas · NumPy · scikit-learn · LightGBM · XGBoost · TensorFlow/Keras · iterative-stratification
 
 ## Contents
-- `Category_Propensity.ipynb`: full pipeline: data loading, feature engineering, modelling, evaluation
+- `Capstone_Category_Propensity.ipynb`: **final version**: data loading, feature engineering (event, ratio,
+  monetary, temporal and diversity features for the top 30 categories), modelling, hyperparameter tuning,
+  per-label threshold optimisation and top-K category suggestions
+- `Category_Propensity.ipynb`: earlier version of the pipeline (top 15 categories)
 
 ## Data
 The data is the **Universal Behavioral Modeling Dataset © 2025 Synerise SA** (RecSys Challenge 2025),
@@ -23,6 +26,6 @@ repository root: `product_buy.parquet`, `add_to_cart.parquet`, `remove_from_cart
 
 ## How to run
 ```bash
-pip install pandas numpy pyarrow scikit-learn lightgbm xgboost tensorflow iterative-stratification jupyter
-jupyter notebook Category_Propensity.ipynb
+pip install pandas numpy pyarrow scikit-learn lightgbm xgboost tensorflow iterative-stratification joblib jupyter
+jupyter notebook Capstone_Category_Propensity.ipynb
 ```
